@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/coder/project/workspace/EventApi/TestProject/TestProject.csproj": {}
+    "/home/coder/project/workspace/EventApi1/EventApi/TestProject/TestProject.csproj": {}
   },
   "projects": {
-    "/home/coder/project/workspace/EventApi/EventApi.csproj": {
+    "/home/coder/project/workspace/EventApi1/EventApi/EventApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/coder/project/workspace/EventApi/EventApi.csproj",
+        "projectUniqueName": "/home/coder/project/workspace/EventApi1/EventApi/EventApi.csproj",
         "projectName": "EventApi",
-        "projectPath": "/home/coder/project/workspace/EventApi/EventApi.csproj",
+        "projectPath": "/home/coder/project/workspace/EventApi1/EventApi/EventApi.csproj",
         "packagesPath": "/home/coder/.nuget/packages/",
-        "outputPath": "/home/coder/project/workspace/EventApi/obj/",
+        "outputPath": "/home/coder/project/workspace/EventApi1/EventApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/coder/.nuget/NuGet/NuGet.Config"
@@ -91,14 +91,14 @@
         }
       }
     },
-    "/home/coder/project/workspace/EventApi/TestProject/TestProject.csproj": {
+    "/home/coder/project/workspace/EventApi1/EventApi/TestProject/TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/coder/project/workspace/EventApi/TestProject/TestProject.csproj",
+        "projectUniqueName": "/home/coder/project/workspace/EventApi1/EventApi/TestProject/TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "/home/coder/project/workspace/EventApi/TestProject/TestProject.csproj",
+        "projectPath": "/home/coder/project/workspace/EventApi1/EventApi/TestProject/TestProject.csproj",
         "packagesPath": "/home/coder/.nuget/packages/",
-        "outputPath": "/home/coder/project/workspace/EventApi/TestProject/obj/",
+        "outputPath": "/home/coder/project/workspace/EventApi1/EventApi/TestProject/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/coder/.nuget/NuGet/NuGet.Config"
@@ -113,8 +113,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/coder/project/workspace/EventApi/EventApi.csproj": {
-                "projectPath": "/home/coder/project/workspace/EventApi/EventApi.csproj"
+              "/home/coder/project/workspace/EventApi1/EventApi/EventApi.csproj": {
+                "projectPath": "/home/coder/project/workspace/EventApi1/EventApi/EventApi.csproj"
               }
             }
           }

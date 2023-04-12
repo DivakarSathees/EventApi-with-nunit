@@ -113,6 +113,55 @@ namespace EventApi.Tests
             Assert.AreEqual(testEventApi.Event_Type, createdEventApi.Event_Type);
             Assert.AreEqual(testEventApi.Start_Date, createdEventApi.Start_Date);
             Assert.AreEqual(testEventApi.End_Date, createdEventApi.End_Date);
-        }        
+        }    
+
+        [Test]
+        public async Task PutEventApi_Should_Update_EventApi()
+        {
+            // Arrange
+            var controller = new EventApiController(_context);
+            var EventApi = new EventApi.Models.EventApi { 
+                        Id = 10,
+                        Event_Name = "Meeting",
+                        Event_Type = "conference",
+                        Start_Date = new DateTime(2023, 04, 13),
+                        End_Date = new DateTime(2023, 04, 21),
+                        Location = "CBE"
+                    };
+            await controller.PostEventApi(EventApi);
+
+            EventApi.Location = "Chennai";
+            EventApi.Event_Type = "Sports";
+
+            var result = await controller.PutEventApi(EventApi.Id, EventApi);
+
+            Assert.That(result, Is.InstanceOf<NoContentResult>());
+
+            var updatedEventApi = await _context.EventApis.FindAsync(EventApi.Id);
+            Assert.That(updatedEventApi, Is.Not.Null);
+            Assert.That(updatedEventApi.Location, Is.EqualTo(EventApi.Location));
+            Assert.That(updatedEventApi.Event_Type, Is.EqualTo(EventApi.Event_Type));
+        }
+
+        
+        [Test]
+        public async Task PutEventApi_ReturnsBadRequest_WhenIdsDoNotMatch()
+        {
+            var EventApi = new EventApi.Models.EventApi
+            {
+                Id = 10,
+                Event_Name = "Meeting",
+                Event_Type = "conference",
+                Start_Date = new DateTime(2023, 04, 13),
+                End_Date = new DateTime(2023, 04, 21),
+                Location = "CBE"
+            };
+            _context.EventApis.Add(EventApi);
+            await _context.SaveChangesAsync();
+
+            var result = await _controller.PutEventApi(2, EventApi);
+
+            Assert.IsInstanceOf(typeof(BadRequestResult), result);
+        }    
     }
 }
